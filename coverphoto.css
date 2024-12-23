@@ -1,0 +1,9 @@
+#coverphoto{
+    padding:0px;
+	margin:0px;
+	background-image: url(../photos-priya.jpg);
+	height:350px;
+	background-repeat:no-repeat;
+	background-size:100% 500px;
+	box-shadow:0px 4px 15px black;
+}

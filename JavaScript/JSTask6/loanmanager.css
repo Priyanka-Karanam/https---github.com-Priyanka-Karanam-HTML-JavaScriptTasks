@@ -1,0 +1,15 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    font-size: small;
+    
+}
+.loan-form {
+    margin-bottom: 20px;
+}
+.loan-list {
+    margin-top: 20px;
+}
+button{
+    color:black
+}

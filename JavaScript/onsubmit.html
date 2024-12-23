@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script>
+        function handleSubmit(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+            
+            // Get the value of the input field
+            var name = document.getElementById('name').value;
+            document.getElementById('output').innerText = 'Form submitted with name: ' + name;
+            console.log("onsubmit function is called the whenever we submit the form!");
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+</body>
+</html>

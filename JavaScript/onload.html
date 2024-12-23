@@ -1,0 +1,16 @@
+
+<html>
+<head>
+    <script>
+        function handleLoad() {
+         //here display a message
+            document.getElementById('message').innerText = 'The Page has fully loaded!';
+            console.log("when page is loaded onload function is called");
+        }
+    </script>
+</head>
+<body onload="handleLoad()">
+    <h1>onload Event Example</h1>
+    <div id="message"></div>
+</body>
+</html>

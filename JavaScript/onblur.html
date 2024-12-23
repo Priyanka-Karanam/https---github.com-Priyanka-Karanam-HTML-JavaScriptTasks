@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script>
+        function handleBlur(event) {
+            // Get the value of the input field
+            var inputValue = event.target.value;
+        
+            document.getElementById('message').innerText = 'we left the input field with value: ' + inputValue;
+        
+            event.target.style.backgroundColor = '';
+        }
+        function handleFocus(event) {
+            // Change the background color when the input field gains focus
+            event.target.style.backgroundColor = 'red';
+            console.log("the function is called input field is blur");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" 
+           onblur="handleBlur(event)" 
+           onfocus="handleFocus(event)" 
+           placeholder="Click or tab here...">
+    
+    <div id="message">

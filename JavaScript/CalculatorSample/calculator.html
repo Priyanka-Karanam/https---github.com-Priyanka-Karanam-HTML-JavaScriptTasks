@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+ </head>
+ <body>
+    <h1>Calculator</h1>
+	<center>
+	<div class="formstyle">
+	<form name="cfrom">
+	   <input id="calc" type="text" name="Answer"><br><br>
+	   <input type="button" value="1" onclick="cfrom.Answer.value+='1'">
+	   <input type="button" value="2" onclick="cfrom.Answer.value+='2'">
+	   <input type="button" value="3" onclick="cfrom.Answer.value+='3'">
+	   <input type="button" value="+" onclick="cfrom.Answer.value+='+'" id="sym">
+	   <br><br>
+	   <input type="button" value="4" onclick="cfrom.Answer.value+='4'">
+	   <input type="button" value="5" onclick="cfrom.Answer.value+='5'">
+	   <input type="button" value="6" onclick="cfrom.Answer.value+='6'">
+	   <input type="button" value="-" onclick="cfrom.Answer.value+='-'" id="sym">
+	   <br><br>
+	   <input type="button" value="7" onclick="cfrom.Answer.value+='7'">
+	   <input type="button" value="8" onclick="cfrom.Answer.value+='8'">
+	   <input type="button" value="9" onclick="cfrom.Answer.value+='9'">
+	   <input type="button" value="*" onclick="cfrom.Answer.value+='*'" id="sym">
+	   <br><br>
+	   <input type="button" value="/" onclick="cfrom.Answer.value+='/'" id="sym">
+	   <input type="button" value="0" onclick="cfrom.Answer.value+='0'">
+	   <input type="button" value="." onclick="cfrom.Answer.value+='.'" id="sym">
+	   <input type="button" value="=" id="sym"
+	   onclick="cfrom.Answer.value=eval(cfrom.Answer.value)">
+	   <br><br>
+	   <input type="button" value="Clear all" onclick="cform.Answer.value=' '" id="clear">
+	   <br><br>
+	  </form>
+	 </div>
+   </center>
+ </body>
+</html>

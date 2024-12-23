@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Magnifier</title>
+    <style>
+        .magnifier {
+            position: relative;
+            display: inline-block;
+        }
+
+        .magnifier img {
+            width: 300px; 
+            height: auto; 
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .magnifier:hover img {
+            transform: scale(2); /* Magnification factor */
+            z-index: 10; /* Ensure magnified image is on top */
+        }
+
+        .magnifier img.magnified {
+            transform: scale(2);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Hover to Magnify the Image</h2>
+    <div class="magnifier">
+        <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_640.jpg" alt="Sample Image">
+    </div>
+</center>
+
+</body>
+</html>

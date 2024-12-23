@@ -1,0 +1,32 @@
+<html>
+<body>
+<h1>Api call with fetch</h1>
+<script>
+const fetchNewProducts=new Promise((resolve,reject)=>{
+// make api request
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response=>response.json())
+
+.then(data=>resolve(data))
+
+.catch(error=>reject(error));
+
+});
+ 
+
+// handle promise outcome
+
+fetchNewProducts.then(products=>{ console.log(products);
+//
+
+products.forEach(product=>{
+console.log(`${product.title} ($${product.price})`);
+});
+})
+.catch(error=>{
+console.error(error);
+
+})
+</script>
+</body>
+</html>

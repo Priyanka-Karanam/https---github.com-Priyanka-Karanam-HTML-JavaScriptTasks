@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Password</title>
+    <style>
+               body {
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+       
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: black;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+       
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+       
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+            <div class="input-field">
+                <input type="password" id="newPassword" placeholder="New Password" required>
+            </div>
+            <div class="input-field">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <p id="error-message"></p>
+            <button type="submit" class="btn">Reset Password</button>
+        </form>
+        <br>
+        <a href="login.html" id="backToLogin">Back to Login</a>
+    </div>
+
+    <script>
+        // Password match validation
+        const form = document.getElementById('resetPasswordForm');
+        const newPassword = document.getElementById('newPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (newPassword.value !== confirmPassword.value) {
+                errorMessage.textContent = 'Passwords do not match';
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+                alert('Password reset successfully!');
+                
+            }
+        });
+
+        // Redirect to login page
+        const backToLogin = document.getElementById('backToLogin');
+        backToLogin.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'login.html'; 
+        });
+    </script>
+</body>
+</html>

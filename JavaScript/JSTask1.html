@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Login Page using JavaScript</title>
+    <style>
+        .login-container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+             margin-top: 50px; 
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function checkLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+          
+            if (username === "Priyanka")
+             {
+                if (password === "Priya@2121") 
+                {
+                    alert("Login successful!");
+                } else {
+                    alert("Incorrect password.");
+                }
+            } else {
+                alert("Incorrect username.");
+            }
+        }
+    </script>
+</head>
+<center>
+<body>
+    
+    <div class="login-container">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <button onclick="checkLogin()">Login</button>
+    </div>
+</center>
+</body>
+</html>

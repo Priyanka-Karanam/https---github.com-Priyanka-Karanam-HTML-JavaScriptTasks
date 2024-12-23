@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scroll</title>
+    <style>
+        .p{
+            display: flex;
+            color: black;
+            width: 200px;
+            height: 200px;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+            scroll-behavior: smooth;
+            
+        }
+        .r{
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="r">
+        <div class="p" style="scroll-margin-top:1px ;background-color: aqua;">This is the scroll margin top property</div>
+        <div class="p" style="scroll-margin-left:20px ;background-color: beige;">This is the Scroll margin left </div>
+        <div class="p" style="scroll-margin-bottom: 20px;background-color: bisque;">This is the scroll margin bottom</div>
+        <div class="p" style="scroll-margin-right: 10px;background-color: blueviolet;">This is the scroll margin right</div>
+    </div>
+    
+</body>
+</html>

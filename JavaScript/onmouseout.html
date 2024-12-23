@@ -1,0 +1,27 @@
+<html>
+<head>
+    <style>
+        #myElement {
+            width: 100px;
+            height: 80px;
+            background-color:red ;
+            color: black;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+<div id="myElement">Left the mouse pointer on me!</div>
+
+<script>
+    function handleMouseOut() {
+        alert('Mouse pointer has left the element!');
+        console.log("onmouseout function is called when we left the cursour");
+    }
+    document.getElementById('myElement').onmouseout = handleMouseOut;
+</script>
+
+</body>
+</html>

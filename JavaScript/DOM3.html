@@ -1,0 +1,50 @@
+<html>
+<body>
+
+<button onclick="writeText()">Add HTML</button>
+<script>
+
+function writeText(){
+
+document.writeln
+ ("hi how are you , how are you doing ")
+}
+
+</script>
+
+</body>
+
+</html>
+
+<html>
+
+<body>
+<script>
+
+var form=document.createElement("form"); 
+console.log(form);
+var username= document.createElement("username"); 
+console.log(username);
+username.id="username";
+
+username.placeholder="enter username here";
+
+var password= document.createElement("password"); 
+console.log(password);
+password.id="password";
+
+password.placeholder="password here"; 
+password.type="password";
+ 
+form.appendChild(username); 
+form.appendChild(password); 
+console.log(form);
+var button=document.createElement("button"); 
+button.innerHTML="capture";
+form.appendChild(button);
+
+var body= document.getElementsByTagName("body"); 
+body[0].appendChild(form);
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script>
+        function handleKeyUp(event) {  
+            var inputValue = event.target.value; 
+            document.getElementById('output').innerText = 'You typed: ' + inputValue;
+            console.log("on keyup function is called the key released!");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="handleKeyUp(event)" placeholder="Type something here...">
+    <div id="output"></div>
+</body>
+</html>
